@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app = "myFirstApp">
+<head>
+    <meta charset="UTF-8">
+    <title>probando con HTTP</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src = "controller.js"></script>
+</head>
+<body ng-controller = "firstcontroller">
+
+    <input type="text" ng-model="newPost.title"><br>
+    <input type="text" ng-model="newPost.body"><br>
+
+    <button ng-click="addPost()">Enviar</button>
+    <ul>
+        <li ng-repeat = "arr in arrs">
+            <h3>{{arr.title}}</h3>
+            {{arr.body}}
+        </li>
+    </ul>
+</body>
+</html>

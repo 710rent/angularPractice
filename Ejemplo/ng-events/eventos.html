@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>ng event</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body>
+    <button ng-mouseover="bandera=true" ng-mouseout="bandera=false">Hover_Me*</button>
+    <span ng-show="bandera">&lt;-Click Me</span>
+
+    <h2>{{bandera | json}}</h2>
+</body>
+</html>

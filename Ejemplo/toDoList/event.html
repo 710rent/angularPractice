@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+    <meta charset="UTF-8">
+    <title>probando eventos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script>
+        angular.module("mainModule",[])
+                .controller("control",function ($scope) {
+                    $scope.name = "Florentino";
+                    
+                    setTimeout( function () {
+                        $scope.name = "Roberto";
+                        console.log($scope.name);
+                        $scope.$digest();
+                    },2000)
+                });
+    </script>
+</head>
+<body ng-controller="control">
+    <h1>{{name}}</h1>
+</body>
+</html>

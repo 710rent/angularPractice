@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="showandhide">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .animated{
+            opacity: 1;
+            max-height: auto;
+            overflow: hidden;
+            transition: all 2s;
+        }
+        .animated.ng-hide{
+            opacity: 0;
+            max-height: 0px !important;
+            display: block !important;
+        }
+    </style>
+    <title>Show & Hide</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="show.js"></script>
+</head>
+<body ng-controller="control">
+    <div ng-show="status" >C  a  r  g  a  n  d  o  .  .  .  </div>
+    <ul ng-hide="arrs.length == 0" class="animated">
+        <li ng-repeat="arr in arrs">
+            <h1>{{arr.title}}</h1><br>
+            <p>{{arr.body}}</p>
+        </li>
+    </ul>
+</body>
+</html>
